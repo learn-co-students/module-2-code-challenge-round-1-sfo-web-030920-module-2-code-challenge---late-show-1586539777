@@ -1,0 +1,9 @@
+<h2><%= @guest.name %> profile</h2>
+
+<h4>List of episodes of <%= @guest.name %></h4>
+<ul>
+  <% @guest.episodes.each do |episode| %>
+    <li>Episode date: <%= episode.created_at %></li>
+    <li><%= episode.appearance.rating %></li>
+  <% end %>
+</ul>
