@@ -1,0 +1,9 @@
+<h2><%= @guest.name %> profile</h2>
+
+<h4>List of episodes of <%= @guest.name %></h4>
+<ul>
+  <% @guest.sorted_app.each do |app| %>
+    <li>Episode date: <%= link_to app.episode.created_at, episode_path(app.episode) %></li>
+    <li><%= app.rating %></li>
+  <% end %>
+</ul>

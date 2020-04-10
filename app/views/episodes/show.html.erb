@@ -1,0 +1,13 @@
+<h1>Episode number <%= @episode.id %></h1>
+
+<fieldset>
+  <legend>Show information</legend>
+  <p>AVG rating: <%= @episode.avg_rating %></p>
+  <p>Episode created_at: <%= @episode.created_at %></p>
+  <h4>List of guests</h4>
+  <ul>
+    <% @episode.guests.each do |guest| %>
+      <li><%= link_to guest.name, guest_path(guest) %></li>
+    <% end %>
+  </ul>
+</fieldset>
