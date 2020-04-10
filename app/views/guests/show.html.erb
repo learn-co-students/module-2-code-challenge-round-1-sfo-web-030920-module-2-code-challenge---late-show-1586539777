@@ -2,8 +2,8 @@
 
 <h4>List of episodes of <%= @guest.name %></h4>
 <ul>
-  <% @guest.episodes.each do |episode| %>
-    <li>Episode date: <%= link_to episode.created_at, episode_path(episode) %></li>
-    <li><%= @guest.appearances.map { |app| app.rating } %></li>
+  <% @guest.sorted_app.each do |app| %>
+    <li>Episode date: <%= link_to app.episode.created_at, episode_path(app.episode) %></li>
+    <li><%= app.rating %></li>
   <% end %>
 </ul>
