@@ -1,0 +1,11 @@
+<h1>New Appearance Form</h1>
+
+<%= form_for @appear do |a| %>
+    <%= a.label "Choose your guest" %> <br>
+    <%= a.number_field :guest_id %> <br>
+    <%= a.label "Choose your episode" %> <br>
+    <%= a.number_field :episode_id %> <br>
+    <%= a.label "Enter your rating" %> <br>
+    <%= a.number_field :rating %> <br>
+    <%= a.submit%> <br>
+    <% end %>
