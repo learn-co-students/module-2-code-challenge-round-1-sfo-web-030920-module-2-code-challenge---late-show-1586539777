@@ -1,5 +1,6 @@
 <h1>Create new Appearance</h1>
 <%= form_for @appearance do |f| %>
+<%= render partial: "shared/error", locals: { obj: @appearance } %>
 <h4>Select an episode</h4>
   <%= f.collection_select :episode_id, @episodes, :id, :id %>
 

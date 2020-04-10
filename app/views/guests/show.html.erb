@@ -4,6 +4,6 @@
 <ul>
   <% @guest.episodes.each do |episode| %>
     <li>Episode date: <%= episode.created_at %></li>
-    <li><%= episode.appearance.rating %></li>
+    <li><%= @guest.appearances.map { |app| app.rating } %></li>
   <% end %>
 </ul>
